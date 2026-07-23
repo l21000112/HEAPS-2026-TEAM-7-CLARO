@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent-assign: 14 55% 55%;
+    --accent-scenarios: 150 30% 42%;
+    --accent-classes: 210 45% 55%;
+    --accent-analytics: 38 62% 50%;
+    --background: 30 50% 97%;        /* warm cream (#fff5ee family) */
+    --foreground: 24 14% 12%;        /* warm ink (#100f0d) */
+    --card: 36 55% 99%;
+    --card-foreground: 24 14% 12%;
+    --popover: 36 55% 99%;
+    --popover-foreground: 24 14% 12%;
+    --primary: 20 15% 32%;           /* mocha taupe — deepened #9b8c89 */
+    --primary-foreground: 30 40% 97%;
+    --secondary: 27 45% 90%;         /* soft tan (#e1c4ac tint) */
+    --secondary-foreground: 20 15% 25%;
+    --muted: 28 35% 92%;
+    --muted-foreground: 20 9% 42%;   /* dark taupe (#86776f), darkened for AA */
+    --accent: 6 55% 90%;             /* subtle rose surface (press states) */
+    --accent-foreground: 20 15% 25%;
+    --success: 145 45% 38%;          /* "you spotted it" — warmed green */
+    --success-foreground: 0 0% 100%;
+    --warning: 35 85% 47%;           /* warm amber */
+    --warning-foreground: 30 60% 12%;
+    --destructive: 8 66% 47%;        /* "you got fooled" — terracotta red */
+    --destructive-foreground: 0 0% 100%;
+    --border: 28 30% 88%;
+    --input: 28 30% 88%;
+    --ring: 20 15% 32%;
+
+    /* dusty-rose brand accent for illustration/highlights (#e2a4a1) */
+    --rose: 3 53% 76%;
+    --rose-foreground: 20 15% 25%;
+
+    /* scam-type categories — nudged warmer, kept distinguishable */
+    --sim-call: 262 45% 58%;         /* muted violet */
+    --sim-chat: 150 40% 40%;         /* muted green */
+    --sim-marketplace: 28 78% 50%;   /* warm orange — sits with palette */
+    --sim-instagram: 330 55% 62%;    /* muted magenta */
+  }
+
+  .dark:root {
+    --accent-assign: 14 58% 64%;
+    --accent-scenarios: 150 32% 54%;
+    --accent-classes: 210 52% 66%;
+    --accent-analytics: 38 66% 60%;
+    --background: 24 12% 9%;          /* warm dark, not blue-black */
+    --foreground: 30 30% 92%;
+    --card: 24 12% 12%;
+    --card-foreground: 30 30% 92%;
+    --popover: 24 12% 12%;
+    --popover-foreground: 30 30% 92%;
+    --primary: 24 28% 68%;           /* light warm taupe (#ceb19b) */
+    --primary-foreground: 24 15% 12%;
+    --secondary: 22 12% 20%;
+    --secondary-foreground: 30 30% 92%;
+    --muted: 22 12% 20%;
+    --muted-foreground: 24 12% 65%;
+    --accent: 10 22% 24%;            /* deep rose-brown surface */
+    --accent-foreground: 30 30% 92%;
+    --success: 145 50% 55%;
+    --success-foreground: 24 15% 10%;
+    --warning: 38 85% 60%;
+    --warning-foreground: 30 60% 12%;
+    --destructive: 8 66% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 10% 22%;
+    --input: 24 10% 22%;
+    --ring: 24 28% 68%;
+
+    --rose: 4 45% 68%;
+    --rose-foreground: 24 15% 12%;
+
+    --sim-call: 262 55% 72%;
+    --sim-chat: 150 45% 52%;
+    --sim-marketplace: 30 80% 60%;
+    --sim-instagram: 330 60% 70%;
+  }
+}

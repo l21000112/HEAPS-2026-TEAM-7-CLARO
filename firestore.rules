@@ -1,0 +1,77 @@
+rules_version = '2';
+
+// Security model: invites + all client writes/deletes are denied here (backend/Admin SDK bypasses these rules); clients read only their own data.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function uid() {
+      return request.auth.uid;
+    }
+
+    match /users/{userId} {
+      allow read: if isSignedIn() && uid() == userId;
+      // C1: client-created profiles are role-pinned to 'student'; teacher elevation happens only via backend invite redemption (Admin SDK bypasses these rules).
+      allow create: if isSignedIn() && uid() == userId
+                    && request.resource.data.role == 'student';
+      // role is immutable from the client; other own-profile fields may change.
+      allow update: if isSignedIn() && uid() == userId
+                    && (!('role' in request.resource.data)
+                        || request.resource.data.role == resource.data.role);
+      allow delete: if false;
+    }
+
+    match /attempts/{attemptId} {
+      // Owner is identified by owner.uid (authenticated) or owner.anonymousId.
+      allow read: if isSignedIn() && resource.data.owner.uid == uid();
+      allow create, update: if false;
+      allow delete: if false;
+    }
+
+    match /classrooms/{classroomId} {
+      allow read: if isSignedIn()
+                  && (resource.data.teacherUid == uid()
+                      || exists(/databases/$(database)/documents/classrooms/$(classroomId)/students/$(uid())));
+      allow create, update: if false;
+      allow delete: if false;
+
+      match /students/{studentUid} {
+        allow read: if isSignedIn()
+                    && (resource.data.studentUid == uid()
+                        || get(/databases/$(database)/documents/classrooms/$(classroomId)).data.teacherUid == uid());
+        allow create, update: if false;
+        allow delete: if false;
+      }
+    }
+
+    match /scenarios/{scenarioId} {
+      allow read: if isSignedIn()
+                  && (resource.data.ownerUid == uid()
+                      || resource.data.visibility == 'public'
+                      || resource.data.visibility == 'marketplace'
+                      || resource.data.status == 'published');
+      allow create, update: if false;
+      allow delete: if false;
+    }
+
+    match /templates/{templateId} {
+      allow read: if isSignedIn()
+                  && (resource.data.ownerUid == uid()
+                      || resource.data.status == 'published');
+      allow create, update: if false;
+      allow delete: if false;
+    }
+
+    match /sessions/{sessionId} {
+      allow read, write: if false;
+    }
+
+    match /invites/{inviteId} {
+      allow read, write: if false;
+    }
+  }
+}

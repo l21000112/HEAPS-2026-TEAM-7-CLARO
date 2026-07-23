@@ -1,0 +1,39 @@
+{
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.lucasleow.com",
+        "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyA1Y0PtQF_0W6F4xmBT316mJG8aqfiMZrg",
+        "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "heaps-c19b4.firebaseapp.com",
+        "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "heaps-c19b4",
+        "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "heaps-c19b4.firebasestorage.app",
+        "EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "329428834685",
+        "EXPO_PUBLIC_FIREBASE_APP_ID": "1:329428834685:web:d3c79776e7a48728619414",
+        "EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID": "G-Z0XPKNP25L"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.lucasleow.com",
+        "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyA1Y0PtQF_0W6F4xmBT316mJG8aqfiMZrg",
+        "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "heaps-c19b4.firebaseapp.com",
+        "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "heaps-c19b4",
+        "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "heaps-c19b4.firebasestorage.app",
+        "EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "329428834685",
+        "EXPO_PUBLIC_FIREBASE_APP_ID": "1:329428834685:web:d3c79776e7a48728619414",
+        "EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID": "G-Z0XPKNP25L"
+      }
+    }
+  }
+}
