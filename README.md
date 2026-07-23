@@ -10,6 +10,35 @@ With the relentless rise in scams globally, frauds are meticulously engineered t
 
 ---
 
+## Table of Contents
+- [Features](#features)
+  - [Students](#students)
+  - [Teachers](#teachers)
+- [Tech Stack](#tech-stack)
+- [Repository Layout](#repository-layout)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+  - [1. Clone & Install Dependencies](#1-clone--install-dependencies)
+  - [2. Backend Environment](#2-backend-environment)
+  - [3. Frontend Environment](#3-frontend-environment)
+  - [4. Run the App](#4-run-the-app)
+- [Roles & Invites](#roles--invites)
+- [Scenario Types](#scenario-types)
+- [Push Notifications](#push-notifications)
+- [Building the APK](#building-the-apk)
+- [Deployment (VPS + Nginx)](#deployment-vps--nginx)
+  - [1. Copy the `backend/` folder onto the VPS](#1-copy-the-backend-folder-onto-the-vps)
+  - [2. Configure `backend/.env`](#2-configure-backendenv)
+  - [3. Run the backend and keep it alive](#3-run-the-backend-and-keep-it-alive)
+  - [4. Put the TLS certificate in place](#4-put-the-tls-certificate-in-place)
+  - [5. Install Nginx and apply the config](#5-install-nginx-and-apply-the-config)
+  - [6. Point the frontend at the URL](#6-point-the-frontend-at-the-url)
+  - [How it all ties together](#how-it-all-ties-together)
+- [Video Demo](#video-demo)
+- [Important notes](#important-notes)
+
+---
+
 ## Features
 
 ### Students
