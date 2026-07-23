@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   View,
   ScrollView,
@@ -6,7 +6,7 @@ import {
   ActivityIndicator,
   Modal,
   TextInput,
-  KeyboardAvoidingView,
+  Keyboard,
   Platform,
   RefreshControl,
 } from 'react-native';
@@ -128,6 +128,22 @@ export default function TeacherScenariosScreen() {
   ]);
 
   const [submitting, setSubmitting] = useState(false);
+  const [keyboardHeight, setKeyboardHeight] = useState(0);
+
+  useEffect(() => {
+    const showEvent = Platform.OS === 'ios' ? 'keyboardWillShow' : 'keyboardDidShow';
+    const hideEvent = Platform.OS === 'ios' ? 'keyboardWillHide' : 'keyboardDidHide';
+    const showSub = Keyboard.addListener(showEvent, (e) => {
+      setKeyboardHeight(e.endCoordinates?.height ?? 0);
+    });
+    const hideSub = Keyboard.addListener(hideEvent, () => {
+      setKeyboardHeight(0);
+    });
+    return () => {
+      showSub.remove();
+      hideSub.remove();
+    };
+  }, []);
 
   const fetchAll = useCallback(async (showSpinner = false) => {
     const currentRequest = ++requestId.current;
@@ -580,12 +596,11 @@ export default function TeacherScenariosScreen() {
           if (!submitting) closeCreator();
         }}
       >
-        <KeyboardAvoidingView
+        <View
           className="flex-1"
-          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
           style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
         >
-          <View className="flex-1 bg-card mt-12 rounded-t-3xl">
+          <View className="flex-1 bg-card mt-12 rounded-t-3xl" style={{ marginBottom: keyboardHeight }}>
             <View className="flex-row items-center justify-between px-5 pt-5 pb-3 border-b border-border">
               <TouchableOpacity onPress={closeCreator} disabled={submitting}>
                 <Text className="text-muted-foreground font-bold">{t('teacher.cancelButton')}</Text>
@@ -1006,7 +1021,7 @@ export default function TeacherScenariosScreen() {
               </View>
             )}
           </View>
-        </KeyboardAvoidingView>
+        </View>
       </Modal>
     </SafeAreaView>
   );
