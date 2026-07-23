@@ -1,5 +1,5 @@
 # CLARO - A Safe Learning Space for All
-<img width="300" height="300" alt="logo" src="https://github.com/user-attachments/assets/c106c335-c9ad-4b26-9670-4945c2fa16e8" />
+<img width="300" height="300" alt="logo" src="https://raw.githubusercontent.com/l21000112/HEAPS-2026-TEAM-7-CLARO/refs/heads/master/frontend/assets/images/logo.png" />
 
 **CLARO** is an android mobile scam-awareness platform where teachers assign simulated scams as homework and students play through them as if they were real - a phone call, a WhatsApp-style chat, a marketplace listing. Students decide: scam, or not a scam? Then, they receive immediate feedback and are told why they were right or wrong.
 
