@@ -6,12 +6,7 @@
 This project was created as a submission to [SMU .Hack's HEAP 2026 Challenge](https://dothack-heap-2026.devpost.com/).
 
 ## Inspiration
-Scams are engineered to exploit trust, urgency and unfamiliarity, and they hurt most the people least likely to be in the room when anti-scam material is written. Persons with disabilities are disproportionately targeted: a scammer's script leans on time pressure, confusing language and authority, all of which land harder on someone with a cognitive disability, a processing difference, low vision, or limited digital literacy. The same tactics work on elderly users, who face the added problem that most scam-education material assumes fluency with the very platform the scam arrives on.
-
-We started with autism-friendly design as the anchor - predictable pacing, low sensory load, plain language, and found that nearly every decision made for that audience made the app better for the wider PWD population and for elderly learners too. Larger text helps low vision. Reduced animation helps vestibular sensitivity and anyone who finds motion distracting. Simpler explanations help cognitive disability, and they help a student learning in their second language.
-
-The other half of the problem: awareness talks don't stick. Being _told_ what a scam looks like isn't the same as having nearly fallen for one. So CLARO doesn't lecture, it puts the learner inside a realistic simulated scam, lets them make the call, then explains what they missed.
-
+With the relentless rise in scams globally, frauds are meticulously engineered to exploit trust and urgency. Unfortunately, Persons With Disabilities (PWD) and the Elderly are disproportionately targeted. Scammer tactics like artificial time pressure and confusing jargon land much harder on individuals with cognitive disabilities, low vision, or limited digital literacy. Whilst traditional scam education relies on passive lectures, there is growing understanding that activities are what engages PWDs. We want to support this cause by gamifying the experience, putting the user inside realistic simulated scams. This lets the learner experience the pressure, make a decision, and safely understand exactly what they missed. Educators also lack an easy to use and convenient platform to orchestrate such scenarios, so we put in an equal amount of effort to ensure easy use and intuitive design on the educators' side of the platform as well.
 
 ---
 
