@@ -231,6 +231,7 @@ npx expo start -c
 ```
 
 apk binary: http://lucasleow.com/share/8lQ1CLQeS-Ankd7iIln9wA
+mirror: https://drive.google.com/file/d/1PpPYVUyjZolYhjXwTdN1yDqCp-MeYire/view?usp=sharing
 
 Then:
 
