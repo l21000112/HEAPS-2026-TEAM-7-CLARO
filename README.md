@@ -488,6 +488,10 @@ DNS: point an A record for `api.example.com` at the VPS public IP, then confirm 
 
 ---
 
+## Video Demo
+
+https://www.youtube.com/watch?v=flH72JjwwYY
+
 ## Important notes
 
 - **Secrets:** Never commit `backend/.env`, Firebase Admin private keys, or FCM service-account JSON. `google-services.json` is client config and is commonly committed; Admin keys are not.
