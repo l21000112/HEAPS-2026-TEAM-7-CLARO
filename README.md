@@ -230,6 +230,8 @@ cd frontend
 npx expo start -c
 ```
 
+apk binary: http://lucasleow.com/share/8lQ1CLQeS-Ankd7iIln9wA
+
 Then:
 
 - Press `a` / `i` for Android / iOS simulator  
