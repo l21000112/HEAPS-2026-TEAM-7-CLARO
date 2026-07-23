@@ -520,7 +520,7 @@ DNS: point an A record for `api.example.com` at the VPS public IP, then confirm 
 
 ## Video Demo
 
-[![Watch the demo video](https://youtube.com)](https://www.youtube.com/watch?v=flH72JjwwYY)
+https://www.youtube.com/watch?v=flH72JjwwYY
 
 ## Important notes
 
